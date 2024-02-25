@@ -72,6 +72,10 @@ menu:
       name: Tags
       url: tags/
       weight: 4
+    - identifier: about
+      name: About
+      url: "/about/"
+      weight: 10
 
 markup:
   goldmark:
