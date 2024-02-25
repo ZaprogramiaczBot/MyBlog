@@ -1,4 +1,81 @@
-baseURL: https://example.org/
-languageCode: en-us
+baseURL: https://github.com/ZaprogramiaczBot/MyBlog/
 title: My New Hugo Site
-theme: ["PaperMod"]
+theme: PaperMod
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  description: "Zaprogramiacz blog"
+  author: Zaprogramiacz
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  comments: false
+  # images: ["images/papermod-cover.png"]
+  
+  assets:
+    disableHLJS: true
+
+  socialIcons:
+    - name: x
+      url: "https://x.com/"
+    - name: github
+      url: "https://github.com/"
+    - name: mastodon
+      url: "https://github.com/"
+
+  homeInfoParams:
+    Title: "PaperMod's Demo"
+    Content: >
+      👋 Welcome to demo page of Hugo's theme PaperMod!
+
+      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+
+      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+
+      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+
+menu:
+  main:
+    - name: Search
+      url: search/
+      weight: 1
+    - name: Archive
+      url: archives/
+      weight: 2
+    - identifier: categories
+      name: Categories
+      url: categories/
+      weight: 3
+    - identifier: tags
+      name: Tags
+      url: tags/
+      weight: 4
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
